@@ -1,18 +1,21 @@
 #include <stdio.h>
 
 /**
- * main - Entry Point
- * Return; Always 0 (Good)
+ * main - prints the number in 16
+ * return: Always 0
  */
-
 int main(void)
 {
-	char c;
+	int num;
+	char la;
 
-	for (c = 'z' ; c >= 'a' ; c--)
-	{
-		putchar(c);
-	}
+	for (num = 0; num < 10; num++)
+		putchar((num % 10) + '0');
+
+	for (la = 'a'; la <= 'f'; la++)
+		putchar(la);
+
 	putchar('\n');
+
 	return (0);
 }
