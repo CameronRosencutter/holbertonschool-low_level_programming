@@ -2,7 +2,7 @@
 
 /**
  * main - prints the number in 16
- * return: Always 0
+ * Return: Always 0
  */
 int main(void)
 {
