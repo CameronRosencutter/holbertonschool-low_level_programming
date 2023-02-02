@@ -2,15 +2,12 @@
 
 /**
  * main - multiply
+ * @a: 1st
+ * @b: 2nd
  * Return: 0
  */
 
-int main(void)
+int mul(int a, int b)
 {
-	int a, b, mul;
-
-	printf("enter 2 numbers to multiply");
-	scanf("%d %d", &a, &b);
-	printf("Multiplacation = %d, mul");
-	return (0);
+	return (a * b);
 }
