@@ -1,7 +1,9 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
- * main - multiply
+ * mul - multiply
+ * Description: multiplies 2 numbers
  * @a: 1st
  * @b: 2nd
  * Return: 0
