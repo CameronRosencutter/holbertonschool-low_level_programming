@@ -7,11 +7,10 @@
  */
 
 int _isdigit(int c)
-{
-	char ch = '2';
 
-	if (_isdigit(ch))
-			return (1);
-			else
-			return (0);
+{
+	if (_isdigit(c))
+		return (1);
+	else
+		return (0);
 }
