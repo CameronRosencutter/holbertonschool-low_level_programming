@@ -1,15 +1,31 @@
-#!/usr/bin/env bash
-#Words
+#include "main.h"
 
-for ((i=1;i<=100;i++))
-do
-if ! ((i%15))
-	then
-	echo "FizzBuzz"
-	elif ! ((i%3))
-	then 
-	echo "buzz"
-	else
-	echo "$i"
-	fi
-	done
+/**
+ * main - Entry
+ * Return: 0
+ */
+
+int main(void)
+{
+	int i;
+
+	i = 1;
+	while (i <= 100)
+	{
+		if (i % 3 == 0 && i % 5 == 0)
+			printf("FizzBuzz");
+		else if (i % 3 == 0)
+			printf("Fizz")
+		else if (i % 5 == 0)
+			printf("Buzz")
+		else
+			printf("%d", i);
+
+		if (i != 100)
+			printf(" ");
+		i++;
+	}
+	printf("\n");
+
+	return (0);
+}
