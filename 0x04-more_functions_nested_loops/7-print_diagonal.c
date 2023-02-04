@@ -3,6 +3,7 @@
 /**
  * print_diagonal - make a diagonal line
  * @n: number of times
+ * Description: words
  */
 
 void print_diagonal(int n)
@@ -20,7 +21,7 @@ void print_diagonal(int n)
 			i--;
 		}
 		_putchar('\\');
-		_putchar('n');
+		_putchar('\n');
 		c++;
 		n--;
 	}
