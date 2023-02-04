@@ -10,7 +10,7 @@ int main(void)
 {
 	int num;
 
-	num = 0;
+	num = 0
 		while (num < 100)
 		{
 			num++;
@@ -30,8 +30,7 @@ int main(void)
 			{
 				printf("FizzBuzz");
 			}
-			if (num < 100)
-				putchar(32);
+			if (num < 100);
 		}
 	putchar('\n');
 	return (0);
