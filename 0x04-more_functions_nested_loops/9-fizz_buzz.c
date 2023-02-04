@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
  * main - Entry
@@ -7,25 +8,31 @@
 
 int main(void)
 {
-	int i;
+	int num;
 
-	i = 1;
-	while (i <= 100)
-	{
-		if (i % 3 == 0 && i % 5 == 0)
-			printf("FizzBuzz");
-		else if (i % 3 == 0)
-			printf("Fizz")
-		else if (i % 5 == 0)
-			printf("Buzz")
-		else
-			printf("%d", i);
-
-		if (i != 100)
-			printf(" ");
-		i++;
-	}
-	printf("\n");
-
+	num = 0;
+		while (num < 100)
+		{
+			num++;
+			if ((num % 3) != 0 && (num % 5) != 0)
+			{
+				printf("%d", num);
+			}
+			else if ((num % 3)  == 0 && (num % 5) != 0)
+			{
+				printf("Fizz");
+			}
+			else if ((num % 3) != 0 && (num % 5) == 0)
+			{
+				printf("Buzz");
+			}
+			else
+			{
+				printf("FizzBuzz");
+			}
+			if (num < 100)
+				putchar(32);
+		}
+	putchar('\n');
 	return (0);
 }
