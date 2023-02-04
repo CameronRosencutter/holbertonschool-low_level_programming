@@ -1,30 +1,35 @@
 #include "main.h"
 
 /**
- * print_diagonal - make a diagonal line
- * @n: number of times
+ * print_triangle - make a triangle
+ * @size: sizes
  * Description: words
  */
 
-void print_diagonal(int n)
+void print_triangle(int size)
 {
-	int c, i;
+	int c, i, j;
 
-	c = 0;
-
-	while (n > 0)
-	{
-		i = c;
-		while (i > 0)
+		c = 0;
+		i = size - 1;
+		while (c < size)
 		{
-			_putchar('#');
-			i--;
+			i = size - 1 - c;
+			j = c + 1;
+			while (i > 0)
+			{
+				_putchar(' ');
+				i--;
+			}
+			while (j > 0)
+			{
+				_putchar('#');
+				j--;
+			}
+			_putchar('\n');
+			c++;
 		}
-		_putchar('#');
-		_putchar('\n');
-		c++;
-		n--;
-	}
-	if (c < 1)
-		_putchar('\n');
+
+		if (size <= 0)
+			_putchar('\n');
 }
