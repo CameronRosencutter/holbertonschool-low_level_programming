@@ -4,33 +4,31 @@
  * cap_string - Captilize words
  * Return: void
  * @s: string
+ * @j: interge
+ * @a: fsafds
  */
 
 char *cap_string(char *s)
 {
-	int = 0, j = 0;
+	int i = 0, j;
+	char a[] = " \t\n,;.!?\"(){}";
 
-	char seps[] = {32, 10, 9, 44, 59, 46, 33, 63, 34, 40, 41, 123, 125};
-
-	int size = sizeof(seps) / sizeof(seps[0]);
-
-	while (s[i] != 0)
+	while (*(s + i))
 	{
-		char c = s[i];
-
-		for (j = 0; j < size; j++)
+		if (*(s + i) >= 'a' && *(s + i) <= 'z')
 		{
-			if (c == seps[j] && s[i + 1] >= 'a' && s[i + 1] <= 'z')
+			if (i == 0)
+				*(s + i) -= 'a' - 'A';
+			else
 			{
-				s[i + 1] = 'A' + (s[i + 1] - 'a');
-				break;
+				for (j = 0; j <= 12; j++)
+				{
+					if (a[j] == *(s + i - 1))
+						*(s + i) -= 'a' - 'A';
+				}
 			}
 		}
 		i++;
 	}
-
-	if (s[0] >= 'a' && s[0] <= 'z')
-		s[0] = 'A' + (s[0] - 'a');
-
 	return (s);
 }
