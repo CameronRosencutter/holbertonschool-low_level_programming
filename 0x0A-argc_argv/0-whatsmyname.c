@@ -10,6 +10,6 @@
 int main(int argc, char *argv[])
 {
 	argc--;
-	printf("This program is named: %s\n", argv[0]);
+	printf("%s\n", argv[0]);
 	return (0);
 }
