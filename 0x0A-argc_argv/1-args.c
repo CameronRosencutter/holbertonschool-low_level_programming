@@ -9,7 +9,7 @@
 
 int main(int argc, char *argv[])
 {
-	printf("%d/n", argc - 1);
-	argv[0] = 0;
+	if (*argv[0] > 0)
+		printf("%i\n", argc - 1);
 	return (0);
 }
