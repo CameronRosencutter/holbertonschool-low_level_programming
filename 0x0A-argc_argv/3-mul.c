@@ -10,19 +10,15 @@
 
 int main(int argc, char *argv[])
 {
-	int a, b;
+	int i, sum = 1;
 
-	a = b = 0;
-	if (argc == 3)
-	{
-		a = atoi(argv[1]);
-		b = atoi(argv[1]);
-		printf("%d\n", a * b);
-		return (0);
-	}
-	else
+	if (argc != 3)
 	{
 		printf("Error\n");
 		return (1);
 	}
+	for (i = 1; i < argc; i++)
+		sum *= atoi(argv[i]);
+	printf("%d\n", sum);
+	return (0);
 }
