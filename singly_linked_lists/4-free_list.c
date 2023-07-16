@@ -1,28 +1,22 @@
 #include "lists.h"
 
 /**
- * add_node - adds a new node at the beginning of list_t
- * @head: pointer to the head of the linked list
- * @str: data to be placed in new node
- * Return: pointer to list
+ * free_list - function frees a list_t list
+ *
+ * @head: the list to be freed
+ *
+ * Return: void
  */
-list_t *add_node(list_t **head, const char *str)
+
+void free_list(list_t *head)
 {
-	list_t *newNode;
+	list_t *current;
 
-	newNode = malloc(sizeof(list_t));
-
-	if (!newNode)
+	while (head != NULL)
 	{
-		free(newNode);
-		return (NULL);
+		current = head;
+		head = head->next;
+		free(current->str);
+		free(current);
 	}
-
-	newNode->next = *head;
-	*head = newNode;
-	(*head)->str = strdup(str);
-	(*head)->len = strlen(str);
-	(*head)->next = newNode->next;
-
-	return (*head);
 }
